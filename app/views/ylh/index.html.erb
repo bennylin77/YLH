@@ -1,0 +1,72 @@
+<div class="menu">
+	<ul>
+		<li id="high1" data_menu_slide="1">ABOUT</li>
+		<li id="high2" data_menu_slide="2">PROFILE</li>
+		<li id="high3" data_menu_slide="3">WORKS</li>
+		<li id="high4" data_menu_slide="4">CONTACT</li>				
+	</ul>	
+</div>
+<section class="title_section section_0">
+</section>	
+<section class="about_section section_1">
+</section>	
+<section class="profile_section section_2">
+</section>
+<section class="works_section section_3">
+</section>
+<section class="contact_section section_4">
+</section>
+<script>
+var controller;
+$(document).ready(function($) {
+	// make a variable to store the window height.
+	var windowHeight = $(window).innerHeight();
+	//for scrolling
+	var links = $('.menu').find('li');
+	links.click(function (e) {
+	    e.preventDefault();
+	    data_menu_slide = $(this).attr('data_menu_slide');
+        goToByScroll(data_menu_slide, 0);
+	});	
+	function goToByScroll(data_menu_slide, menuHeight) {
+		htmlbody = $('html,body');	
+	    htmlbody.animate({
+	        scrollTop: $('.section_'+data_menu_slide).offset().top - menuHeight
+	    }, 1000);
+	}	
+	// function to be used to retrieve variable
+	function getWindowHeight() {
+		return windowHeight;
+	}
+	
+	// update window height on resize
+	$(window).on("resize", function () {
+			windowHeight = $(window).innerHeight();
+	});		
+	// init controller
+	controller = new ScrollMagic();
+	// build scenes
+	var tween_menu = TweenMax.to(".menu", 1, {autoAlpha: 1});
+	new ScrollScene({triggerElement: ".about_section", triggerHook: 0.2, duration: 180})
+								.setTween(tween_menu)
+								.addTo(controller)
+								.addIndicators();	
+								
+	new ScrollScene({triggerElement: ".about_section", triggerHook: 0.2, duration: getWindowHeight})
+								.setClassToggle("#high1", "height_active") // add class toggle
+								.addTo(controller)
+								.addIndicators();
+	new ScrollScene({triggerElement: ".profile_section", triggerHook: 0.2, duration: getWindowHeight})
+								.setClassToggle("#high2", "height_active") // add class toggle
+								.addTo(controller)
+								.addIndicators();
+	new ScrollScene({triggerElement: ".works_section", triggerHook: 0.2, duration: getWindowHeight})
+								.setClassToggle("#high3", "height_active") // add class toggle
+								.addTo(controller)
+								.addIndicators();
+	new ScrollScene({triggerElement: ".contact_section", triggerHook: 0.2, duration: getWindowHeight})
+								.setClassToggle("#high4", "height_active") // add class toggle
+								.addTo(controller)
+								.addIndicators();	
+});	
+</script>
