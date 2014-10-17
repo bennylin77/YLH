@@ -3,6 +3,10 @@ html, body{
 	padding: 0;
 	margin: 0;
 } 
+
+
+
+/*=============title section==========*/
 .title_section{
 	background: #FF75D1;
 	background: none;
@@ -10,15 +14,221 @@ html, body{
 	height: 100%;
 	min-height: 500px;
 	min-width: 100%;
+	font-family: Microsoft JhengHei, Arial, sans-serif;
 }
+.title_section img{
+
+}
+.daughter_j{
+	height: 300px;	
+}
+.daughter_s{
+	height: 300px;	
+}
+.husband{
+	height: 300px;
+	position: absolute;
+	top: 10%;
+	right: 130px;	
+	z-index: 5;	
+}
+.me{
+	height: 300px;	
+	position: absolute;
+	top: 37%;
+	right: 100px;	
+	z-index: 5;
+
+}
+.dog{
+	height: 300px;		
+	position: absolute;
+	top: 20%;
+	right: 100px;	
+}
+
+.title_section_NCTU{
+	position: absolute;
+	top: 50px;
+	left: 5%;
+	width: 19em;
+	background:  rgba(229, 196, 66, 0.9);
+	z-index: 5;
+}
+.title_section_NCTU_outter{
+	position: absolute;
+	top: 120px;
+	left: 7%;
+	width: 20.5em;
+	height: 170px;
+	background:  rgba(229, 196, 66, 0.9);
+	z-index: 1;	
+}
+.title_section_NCTU_en{
+	position: relative;
+	top: 20px;		
+	left: 1em; 
+	font-size: 2.8em;
+	font-family:Times New Roman;
+}
+.title_section_NCTU_ch{
+	position: relative;	
+	top: 30px;		
+  left: 3.1em;
+	font-size: 20px;
+	letter-spacing: 23px;
+}
+.title_section_YLH_ch{
+	position: absolute;
+	top: 330px;
+  left: 5%;		
+	width: 18em;
+	padding-left: 40px;
+	line-height: 45px;
+	font-size: 18px;	
+	background:  rgba(229, 196, 66, 0.9);	
+}
+.title_section_YLH_en{
+	position: absolute;
+  top: 410px;
+	left: 7%;		
+	width: 250px;
+	line-height: 90px;
+	font-size: 80px;	
+	font-family:Times New Roman;	
+}
+/*
+.mouse{
+	color: rgba(229, 196, 66, 0.9);
+	position: absolute;
+	bottom: 6%;
+  left: 50%;		
+	font-size: 60px;	
+ 	cursor: pointer;		
+}
+.mouse:hover{
+	opacity: 0.8;
+}
+*/
+.arrow-down{
+	color: rgba(229, 196, 66, 0.9);	
+	position: absolute;
+	bottom: 2%;
+  left: 50%; 	
+	font-size: 40px;		
+  cursor: pointer;    
+}
+.arrow-down{
+  opacity: 0.8;  
+}
+/*=============about section==========*/
 .about_section{
-	background: #FFFF99;
-	height: 100%;
+	/*background: #FFFF99;*/
+
+  min-height: 900px;
+  min-width: 100%;	
+	font-family:Times New Roman;	
 }
+.about_title{	
+   position: relative;   
+	letter-spacing: 5px;
+	font-size: 55px;
+	width: 300px;
+	top: 100px;		
+  left: 28%;  
+}
+.about_description{	
+  position: relative;    
+	letter-spacing: 1px;	
+	font-size: 20px;	
+	line-height: 25px;
+  left: 28%;  			
+  top: 140px;   
+	width: 800px;
+	height: 270px;
+	padding: 30px;
+	background:  rgba(229, 196, 66, 0.9);	
+	font-style: italic;	
+  z-index: 5;
+}
+.about_description_outter{		
+  position: relative;    
+  left: 34%;           
+  top: -100px;   		
+	width: 830px;
+	height: 280px;
+	background:  rgba(229, 196, 66, 0.9);			
+  z-index: 1;	
+}
+
+/*=============profile section==========*/
 .profile_section{
-	background: #CCFFCC;
-	height: 100%;
+	/*background: #CCFFCC;*/
+  min-height: 900px;
+  min-width: 100%;  
+  font-family:Times New Roman;  
 }	
+.profile_title{ 
+   position: relative;   
+  letter-spacing: 5px;
+  font-size: 55px;
+  width: 300px;
+  top: 100px;   
+  left: 28%;  
+}
+.profile_description{ 
+  position: relative;    
+  letter-spacing: 1px;  
+  font-size: 20px;  
+  line-height: 25px;
+  left: 28%;        
+  top: 140px;   
+  width: 350px;
+  height: 270px;
+  padding: 30px;
+  background:  rgba(229, 196, 66, 0.9); 
+  font-style: italic; 
+  z-index: 5;
+}
+.profile_description_outter{    
+  position: relative;    
+  left: 34%;           
+  top: -130px;       
+  width: 380px;
+  height: 310px;
+  background:  rgba(229, 196, 66, 0.9);     
+  z-index: 1; 
+}
+.profile_right_1{
+  position: relative;    
+  left: 68%;           
+  top: -500px;       
+  width: 300px;
+  height: 90px;
+  background:  rgba(229, 196, 66, 0.9); 
+  font-style: italic; 
+}
+.profile_right_2{
+  position: relative;    
+  left: 68%;           
+  top: -450px;       
+  width: 300px;
+  height: 90px;
+  background:  rgba(229, 196, 66, 0.9); 
+  font-style: italic;   
+}
+.profile_right_3{
+  position: relative;    
+  left: 68%;           
+  top: -400px;       
+  width: 300px;
+  height: 90px;
+  background:  rgba(229, 196, 66, 0.9); 
+  font-style: italic;   
+}
+
+
+/*=============works section==========*/
 .works_section{
 	background: #66FFFF;
 	height: 100%;
@@ -29,17 +239,18 @@ html, body{
 }
 
 
-
+/*============= menu ==========*/
 .menu {
-    visibility: hidden;
+  visibility: hidden;
 	text-align: left;
 	position: fixed;
-	top: 80px;
-	left: 70px;
+	top: 5%;
+	left: 5%;
 	background:  rgba(229, 196, 66, 0.9);
 	border-radius: 0px;
 	border:  8px solid rgba(255, 255, 255, 0.9);
 	z-index: 1000;
+	font-family:Times New Roman;
 }
 .menu ul{
 	padding: 10px;
@@ -50,7 +261,6 @@ html, body{
 	letter-spacing: 3px;
 	line-height: 35px;	
 	border-bottom: 2px solid rgba(255, 255, 255, 0.9);
-	color: rgba(255, 255, 255, 0.9); 
 	cursor: pointer;
 }
 .menu ul li:hover{

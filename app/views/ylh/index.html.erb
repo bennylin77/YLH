@@ -7,20 +7,62 @@
 	</ul>	
 </div>
 <section class="title_section section_0">
+	<div class="title_section_NCTU">
+			<div class="title_section_NCTU_en">
+			Professor of National Chiao Tung University	
+			</div>	
+			<div class="title_section_NCTU_ch">
+			國立交通大學
+			</div>			
+	</div>	
+	<div class="title_section_NCTU_outter">
+	</div>
+	<div class="title_section_YLH_ch">
+		黃 —— 育　綸　&#9642; &#9642; &#9642; &#9642;　教　授
+	</div>
+	<div class="title_section_YLH_en">
+		YU LUN HUANG
+	</div>	
+	<!--<span class="mouse_arrow-down-icon icon-mouse-1 mouse"></span>-->	
+	<span class="mouse_arrow-down-icon icon-arrow-down arrow-down"></span>
+	<!--
+	<%=image_tag 'daughter_j.jpg', class: 'daughter_j'%>
+	<%=image_tag 'daughter_s.jpg', class: 'daughter_s'%>	
+	<%=image_tag 'husband.jpg', class: 'husband'%>
+	<%=image_tag 'me.jpg', class: 'me'%>		
+	<%=image_tag 'dog.jpg', class: 'dog'%>-->			
 </section>	
 <section class="about_section section_1">
+<div class="about_title">ABOUT</div>	
+<div class="about_description"><span style="font-size: 45px;">R</span>TES Lab is a laboratory established on July 4th, 2004. The lab primarily focuses on the researches of embedded and real-time operating systems, network security, software obfuscation, voice-over-IP, network quality, Human-computer interaction, etc. Headed by Professor Yu-Lun Huang, who expertizes in embedded software design and has years of practical experiences in the embedded industry, RTES lab members have been growing to more than ten members in the past two years. The lab equips with several desktop and laptop computers, evaluation boards with various embedded processors, Bluetooth development SDK, FPGAs, ZigBee, RFID EV boards, logical analyzers and oscillators. You are welcome to visit our laboratory and enjoy a trip to the world of embedded systems.
+</div>	
+<div class="about_description_outter"></div>
 </section>	
 <section class="profile_section section_2">
+<div class="profile_title">PROFILE</div>		
+<div class="profile_description">
+</div>	
+<div class="profile_description_outter"></div>	
+<div class="profile_right_1"></div>	
+<div class="profile_right_2"></div>	
+<div class="profile_right_3"></div>	
 </section>
 <section class="works_section section_3">
 </section>
 <section class="contact_section section_4">
 </section>
+
+
 <script>
 var controller;
 $(document).ready(function($) {
 	// make a variable to store the window height.
 	var windowHeight = $(window).innerHeight();
+	//for mouse
+	$('.arrow-down').click(function (e) {
+	    e.preventDefault();
+        goToByScroll(1, 0);
+	});		
 	//for scrolling
 	var links = $('.menu').find('li');
 	links.click(function (e) {
@@ -46,12 +88,54 @@ $(document).ready(function($) {
 	// init controller
 	controller = new ScrollMagic();
 	// build scenes
-	var tween_menu = TweenMax.to(".menu", 1, {autoAlpha: 1});
+	new ScrollScene({triggerElement: ".title_section"})
+								.setTween(TweenMax.from(".title_section_YLH_ch", 1.5, {left: "0", ease: Linear.easeNone}))
+								.addTo(controller)
+								.addIndicators({zindex: 1, suffix: "1"});	
+	new ScrollScene({triggerElement: ".title_section"})
+								.setTween(TweenMax.from(".title_section_NCTU", 1.5, {top: "0%", ease: Linear.easeNone}))
+								.addTo(controller)
+								.addIndicators({zindex: 1, suffix: "1"});	
+	new ScrollScene({triggerElement: ".title_section"})
+								.setTween(TweenMax.from(".title_section_YLH_en", 1.5, {scale: 0.5, ease: Linear.easeNone}))
+								.addTo(controller)
+								.addIndicators({zindex: 1, suffix: "1"});							
+	new ScrollScene({triggerElement: ".title_section"})
+								.setTween(TweenMax.fromTo(".arrow-down", 0.6,
+									{bottom: '3%'},
+									{bottom: '6%', repeat: -1, yoyo: true, ease: Circ.easeInOut}
+								))
+								.addTo(controller)
+								.addIndicators({zindex: 1, suffix: "1"});								
+								
+																								
+	new ScrollScene({triggerElement: ".about_section"})
+								.setTween(TweenMax.from(".about_description", 1, {scale: 0.5, ease: Linear.easeNone}))
+								.addTo(controller)
+								.addIndicators({zindex: 1, suffix: "1"});							
+	new ScrollScene({triggerElement: ".profile_section"})
+								.setTween(TweenMax.from(".about_description", 1, {scale: 0.5, ease: Linear.easeNone}))
+								.addTo(controller)
+								.addIndicators({zindex: 1, suffix: "1"});									
+	new ScrollScene({triggerElement: ".profile_section"})
+								.setTween(TweenMax.from(".profile_right_1", 1, {top: "0px", ease: Linear.easeNone}))
+								.addTo(controller)
+								.addIndicators({zindex: 1.3, suffix: "1"});	
+	new ScrollScene({triggerElement: ".profile_section"})
+								.setTween(TweenMax.from(".profile_right_2", 1, {top: "0px", ease: Linear.easeNone}))
+								.addTo(controller)
+								.addIndicators({zindex: 1.7, suffix: "1"});								
+	new ScrollScene({triggerElement: ".profile_section"})
+								.setTween(TweenMax.from(".profile_right_3", 1, {top: "0px", ease: Linear.easeNone}))
+								.addTo(controller)
+								.addIndicators({zindex: 2.1, suffix: "1"});								
+								
+																								
+	var tween_menu = TweenMax.to(".menu", 1, {autoAlpha: 1});								
 	new ScrollScene({triggerElement: ".about_section", triggerHook: 0.2, duration: 180})
 								.setTween(tween_menu)
 								.addTo(controller)
-								.addIndicators();	
-								
+								.addIndicators();									
 	new ScrollScene({triggerElement: ".about_section", triggerHook: 0.2, duration: getWindowHeight})
 								.setClassToggle("#high1", "height_active") // add class toggle
 								.addTo(controller)
