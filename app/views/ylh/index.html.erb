@@ -15,41 +15,84 @@
 			國立交通大學
 			</div>			
 	</div>	
-	<div class="title_section_NCTU_outter">
-	</div>
+	<div class="title_section_NCTU_outter_first"></div>
+	<div class="title_section_NCTU_outter_second"></div>	
 	<div class="title_section_YLH_ch">
 		黃 —— 育　綸　&#9642; &#9642; &#9642; &#9642;　教　授
 	</div>
+	<div class="title_section_YLH_ch_outter"></div>
 	<div class="title_section_YLH_en">
 		YU LUN HUANG
-	</div>	
-	<!--<span class="mouse_arrow-down-icon icon-mouse-1 mouse"></span>-->	
+	</div>
+	<div class="title_section_RTES_outter">
+	<div class="title_section_ECE_top">ECE</div>	
+	<div class="title_section_RTES">RTES</div>	
+	<div class="title_section_ECE_bottom">ECE</div>			
+	</div>
+	
+			
 	<span class="mouse_arrow-down-icon icon-arrow-down arrow-down"></span>
-	<!--
-	<%=image_tag 'daughter_j.jpg', class: 'daughter_j'%>
-	<%=image_tag 'daughter_s.jpg', class: 'daughter_s'%>	
-	<%=image_tag 'husband.jpg', class: 'husband'%>
-	<%=image_tag 'me.jpg', class: 'me'%>		
-	<%=image_tag 'dog.jpg', class: 'dog'%>-->			
+		
+		
 </section>	
+
+
+<section class="me_section">
+	<div style="background: #ffffff url('<%=asset_url 'me.jpg'%>') no-repeat right top;
+				overflow: hidden;
+    			background-size: cover;
+    			background-position: center center;">
+	</div>
+</section>
 <section class="about_section section_1">
 <div class="about_title">ABOUT</div>	
-<div class="about_description"><span style="font-size: 45px;">R</span>TES Lab is a laboratory established on July 4th, 2004. The lab primarily focuses on the researches of embedded and real-time operating systems, network security, software obfuscation, voice-over-IP, network quality, Human-computer interaction, etc. Headed by Professor Yu-Lun Huang, who expertizes in embedded software design and has years of practical experiences in the embedded industry, RTES lab members have been growing to more than ten members in the past two years. The lab equips with several desktop and laptop computers, evaluation boards with various embedded processors, Bluetooth development SDK, FPGAs, ZigBee, RFID EV boards, logical analyzers and oscillators. You are welcome to visit our laboratory and enjoy a trip to the world of embedded systems.
+<div class="about_description"><span style="font-size: 45px;">R</span>TES Lab is a laboratory established on July 4th, 2004. The lab primarily focuses on the researches of embedded and real-time operating systems, network security, software obfuscation, voice-over-IP, network quality, Human-computer interaction, etc. Headed by Professor Yu-Lun Huang, who expertizes in embedded software design and has years of practical experiences in the embedded industry, RTES lab members have been growing to more than fifty members in the past ten years. The lab equips with several desktop and laptop computers, evaluation boards with various embedded processors, Bluetooth development SDK, FPGAs, ZigBee, RFID EV boards, logical analyzers and oscillators. You are welcome to visit our laboratory and enjoy a trip to the world of embedded systems.
 </div>	
 <div class="about_description_outter"></div>
 </section>	
 <section class="profile_section section_2">
 <div class="profile_title">PROFILE</div>		
 <div class="profile_description">
+<div class="profile_sub_left_title">PRESENT</div>
+<div class="profile_sub_left_content">Professor of National Chiao Tung University</div>
+<br><div class="profile_sub_left_title">EXPERIENCES</div>
+<div class="profile_sub_left_content">Consultant of Mozilla Taiwan</div>
+<div class="profile_sub_left_content">Chief of Center for Digital Content Production (NCTU)</div>
+<div class="profile_sub_left_content">Chief of Center for Continuing Education (NCTU)</div>
+<br><div class="profile_sub_left_title">EDUCATION</div>
+<div class="profile_sub_left_content">Ph.D., National Chiao Tung University</div>
+<div class="profile_sub_left_content">M.S., National Chiao Tung University</div>
+<div class="profile_sub_left_content">B.S., National Chiao Tung University</div>
 </div>	
 <div class="profile_description_outter"></div>	
-<div class="profile_right_1"></div>	
-<div class="profile_right_2"></div>	
-<div class="profile_right_3"></div>	
+<div class="profile_right_1">
+<a href="#" class="profile_right_title">HONORS/AWARDS</a>
+</div>	
+<div class="profile_right_2">
+<a href="#" class="profile_right_title">PUBLICATIONS</a>
+</div>	
+<div class="profile_right_3">
+<a href="#" class="profile_right_title">PATENTS</a>
+</div>	
 </section>
 <section class="works_section section_3">
+<div class="works_title">WORKS</div>	
+<div class="works_description"></div>	
+
 </section>
 <section class="contact_section section_4">
+<div class="works_title">CONTACT</div>	
+<div class="contact_description">
+<div>ylhuang@cn.nctu.edu.tw</div>
+<br><br>
+<div>Office</div>
+<div>EE719, +886 03-5712121 ext 31476</div>
+<br>
+<div>RTES Lab</div>
+<div>EE913, +886 03-5712121 ext 54398</div> 
+</div>	
+<div class="contact_description_outter"></div>	
+
 </section>
 
 
@@ -97,7 +140,11 @@ $(document).ready(function($) {
 								.addTo(controller)
 								.addIndicators({zindex: 1, suffix: "1"});	
 	new ScrollScene({triggerElement: ".title_section"})
-								.setTween(TweenMax.from(".title_section_YLH_en", 1.5, {scale: 0.5, ease: Linear.easeNone}))
+								.setTween(TweenMax.from(".title_section_NCTU_outter_first", 1, {left: "0%", ease: Linear.easeNone}))
+								.addTo(controller)
+								.addIndicators({zindex: 1, suffix: "1"});									
+	new ScrollScene({triggerElement: ".title_section"})
+								.setTween(TweenMax.to(".title_section_YLH_en", 1.5, {autoAlpha: 1, ease: Linear.easeNone}))
 								.addTo(controller)
 								.addIndicators({zindex: 1, suffix: "1"});							
 	new ScrollScene({triggerElement: ".title_section"})
@@ -114,7 +161,7 @@ $(document).ready(function($) {
 								.addTo(controller)
 								.addIndicators({zindex: 1, suffix: "1"});							
 	new ScrollScene({triggerElement: ".profile_section"})
-								.setTween(TweenMax.from(".about_description", 1, {scale: 0.5, ease: Linear.easeNone}))
+								.setTween(TweenMax.from(".profile_description", 1, {scale: 0.5, ease: Linear.easeNone}))
 								.addTo(controller)
 								.addIndicators({zindex: 1, suffix: "1"});									
 	new ScrollScene({triggerElement: ".profile_section"})
@@ -129,8 +176,14 @@ $(document).ready(function($) {
 								.setTween(TweenMax.from(".profile_right_3", 1, {top: "0px", ease: Linear.easeNone}))
 								.addTo(controller)
 								.addIndicators({zindex: 2.1, suffix: "1"});								
-								
-																								
+	new ScrollScene({triggerElement: ".works_section"})
+								.setTween(TweenMax.from(".works_description", 1, {scale: 0.5, ease: Linear.easeNone}))
+								.addTo(controller)
+								.addIndicators({zindex: 2.1, suffix: "1"});										
+	new ScrollScene({triggerElement: ".contact_section"})
+								.setTween(TweenMax.from(".contact_description", 1, {scale: 0.5, ease: Linear.easeNone}))
+								.addTo(controller)
+								.addIndicators({zindex: 1, suffix: "1"});																								
 	var tween_menu = TweenMax.to(".menu", 1, {autoAlpha: 1});								
 	new ScrollScene({triggerElement: ".about_section", triggerHook: 0.2, duration: 180})
 								.setTween(tween_menu)
@@ -152,5 +205,10 @@ $(document).ready(function($) {
 								.setClassToggle("#high4", "height_active") // add class toggle
 								.addTo(controller)
 								.addIndicators();	
+	new ScrollScene({triggerElement: ".me_section", triggerHook: 1, duration: getWindowHeight})
+								.setTween(TweenMax.from(".me_section > div", 1, {top: "-80%", ease: Linear.easeNone}))
+								.addTo(controller)
+								.addIndicators({zindex: 1, suffix: "1"});								
+								
 });	
 </script>
