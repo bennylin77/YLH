@@ -17,4 +17,5 @@
 //= require modernizr.custom.min.js
 //= require jquery.scrollmagic.js
 //= require jquery.scrollmagic.debug.js
+//= require jquery.fancybox.pack.js
 //= require_self
