@@ -75,13 +75,13 @@
 		</div>	
 		<div class="profile_description_outter"></div>	
 		<div class="profile_right_1">
-		<a id="openHonorsAwardsBox" href="#honors_awards_fancybox" class="profile_right_title">HONORS/AWARDS</a>
+		<a id="openHonorsAwardsBox" href="#honors_awards_fancybox" class="profile_right_title">Honors</a>
 		</div>	
 		<div class="profile_right_2">
-		<a href="#" class="profile_right_title">PUBLICATIONS</a>
+		<a id="openPublicationsBox" href="#publications_fancybox"  class="profile_right_title">Publications</a>
 		</div>	
 		<div class="profile_right_3">
-		<a href="#" class="profile_right_title">PATENTS</a>
+		<a id="openPatentsBox" href="#patents_fancybox"  class="profile_right_title">Patents</a>
 		</div>	
 		<%=render "honors_awards" %>
 		<%=render "publications" %>
@@ -130,6 +130,14 @@
 		<div>EE913, +886 03-5712121 ext 54398</div> 
 		</div>	
 		<div class="contact_description_outter"></div>
+		<div class="contact_right_1">
+			<div class="contact_right_1_container">
+				<div class="contact_right_1_upper_ece">ECE</div>
+				<div class="contact_right_1_nctu">nctu</div>	
+				<div class="contact_right_1_bottom_ece">ECE</div>				
+			</div>		
+		</div>	
+		<div class="contact_right_1_outter"></div>			
 	</div>	
 </section>
 <script>
@@ -221,11 +229,14 @@ $(document).ready(function($) {
 								.addTo(controller);									
 	new ScrollScene({triggerElement: ".works_section"})
 								.setTween(TweenMax.from(".works_right_2_outter_second", 1.2, {top: "0px", ease: Linear.easeNone}))
-								.addTo(controller);	
-																															
+								.addTo(controller);																																
 	new ScrollScene({triggerElement: ".contact_section"})
 								.setTween(TweenMax.from(".contact_description", 1, {scale: 0.5, ease: Linear.easeNone}))
-								.addTo(controller);																								
+								.addTo(controller);		
+	new ScrollScene({triggerElement: ".contact_section"})
+								.setTween(TweenMax.from(".contact_right_1", 1, {scale: 0.5, ease: Linear.easeNone}))
+								.addTo(controller);										
+																				
 	var tween_menu = TweenMax.to(".menu", 1, {autoAlpha: 1});								
 	new ScrollScene({triggerElement: ".about_section", triggerHook: 0.2, duration: 180})
 								.setTween(tween_menu)
@@ -252,7 +263,6 @@ $(document).ready(function($) {
 								.setTween(TweenMax.from(".profile_section_parallax", 1, {top: "-1000", ease: Linear.easeNone}))
 								.addTo(controller).addIndicators({zindex: 1, suffix: "3"});																		
 
-
 	$("#openHonorsAwardsBox").fancybox({
 		tpl: {
 			  closeBtn: "<div title='Close' class='fancybox_close'>x</div>"
@@ -266,6 +276,32 @@ $(document).ready(function($) {
 		    }
 		  }
 	    });	
+	$("#openPublicationsBox").fancybox({
+		tpl: {
+			  closeBtn: "<div title='Close' class='fancybox_close'>x</div>"
+		},		
+	    openEffect	: 'elastic',
+	    closeEffect	: 'elastic', 
+	    padding: 35,  
+	    helpers: {
+		      overlay: {
+		      locked: false
+		    }
+		  }
+	    });	
+	$("#openPatentsBox").fancybox({
+		tpl: {
+			  closeBtn: "<div title='Close' class='fancybox_close'>x</div>"
+		},		
+	    openEffect	: 'elastic',
+	    closeEffect	: 'elastic', 
+	    padding: 35,  
+	    helpers: {
+		      overlay: {
+		      locked: false
+		    }
+		  }
+	    });		    	    
 	    
 });	
 </script>
