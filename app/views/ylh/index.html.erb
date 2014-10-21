@@ -36,7 +36,7 @@
 			</div>
 		</div>	
 	</div>		
-	<%=image_tag 'arrow_down.svg', class: 'arrow-down'%>	
+	<%=image_tag 'arrow_down.svg', class: 'arrow-down'%>
 </section>	
 <section class="me_section">
 	<div style="background: #ffffff url('<%=asset_url 'me.jpg'%>') no-repeat center center; background-size: cover;">
@@ -266,7 +266,8 @@ $(document).ready(function($) {
 	$("#openHonorsAwardsBox").fancybox({
 		tpl: {
 			  closeBtn: "<div title='Close' class='fancybox_close'>x</div>"
-		},		
+		},
+		nextClick: true, 		
 	    openEffect	: 'elastic',
 	    closeEffect	: 'elastic', 
 	    padding: 35,  
@@ -279,7 +280,8 @@ $(document).ready(function($) {
 	$("#openPublicationsBox").fancybox({
 		tpl: {
 			  closeBtn: "<div title='Close' class='fancybox_close'>x</div>"
-		},		
+		},	
+		nextClick: true,	
 	    openEffect	: 'elastic',
 	    closeEffect	: 'elastic', 
 	    padding: 35,  
@@ -292,7 +294,8 @@ $(document).ready(function($) {
 	$("#openPatentsBox").fancybox({
 		tpl: {
 			  closeBtn: "<div title='Close' class='fancybox_close'>x</div>"
-		},		
+		},	
+	    nextClick: true,	
 	    openEffect	: 'elastic',
 	    closeEffect	: 'elastic', 
 	    padding: 35,  

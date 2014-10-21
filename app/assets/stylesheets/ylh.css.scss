@@ -144,6 +144,7 @@ html, body{
   position: relative;
   top: -670px;
   left: 780px;  
+   width: 350px;  
   letter-spacing: 3px;    
   font-size: 20px;    
   line-height: 30px;
@@ -159,12 +160,12 @@ html, body{
 	color: #ffffff;
 	position: absolute;
 	bottom: 2%;
-  left: 50%; 	
+  	left: 50%; 	
 	font-size: 40px;		
-  cursor: pointer;    
+  	cursor: pointer;    
 }
 .arrow-down{
-  opacity: 0.8;  
+  	opacity: 0.8;  
 }
 /*=============about section==========*/
 .me_section{
@@ -239,6 +240,7 @@ html, body{
 }
 .about_icon{
   position: relative; 
+  width: 800px;
   top: 40px;     
   left: 30%;  
 }
